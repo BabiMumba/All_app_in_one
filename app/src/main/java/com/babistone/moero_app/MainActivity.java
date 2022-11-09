@@ -15,7 +15,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = MainActivity.class.getSimpleName();
-    public static final String SAMPLE_FILE = "test.pdf";
+    public static final String SAMPLE_FILE = "sfp.pdf";
     PDFView viewPDF;
     Integer page = 0;
     String fileName;
