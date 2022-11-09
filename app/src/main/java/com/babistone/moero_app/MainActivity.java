@@ -1,14 +1,15 @@
 package com.babistone.moero_app;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
+import java.io.File;
 import java.util.List;
 
 
@@ -34,19 +35,24 @@ public class MainActivity extends AppCompatActivity {
         fileName = MainActivity.SAMPLE_FILE;
 
         //Open PDF from file
+        File file = new File(Environment.getExternalStorageDirectory() + "/test.pdf");
+        viewPDF.fromFile(file);
+
         /**
-         File file = new File(Environment.getExternalStorageDirectory() + "/test.pdf");
-         viewPDF.fromFile(file);
+
          */
 
         //Open from Asset
+        /*
         viewPDF.fromAsset(SAMPLE_FILE)
                 .defaultPage(0)
                 .enableSwipe(true)
-                .swipeHorizontal(false)
+                .swipeHorizontal(true)
                 .enableAnnotationRendering(true)
                 .scrollHandle(new DefaultScrollHandle(this))
                 .load();
+         */
+
     }
 
     public void onPageChanged(int page, int pageCount) {
