@@ -36,6 +36,14 @@
         android:id="@+id/book3"
         android:textAllCaps="false"
         />
+    <Button
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ouvrir"
+        android:id="@+id/book4"
+        android:textAllCaps="false"
+        />
 
 </LinearLayout>
     <com.github.barteksc.pdfviewer.PDFView

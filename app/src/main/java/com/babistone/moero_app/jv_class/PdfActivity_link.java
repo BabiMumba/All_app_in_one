@@ -2,8 +2,11 @@ package com.babistone.moero_app.jv_class;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,6 +15,7 @@ import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -22,7 +26,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class PdfActivity_link extends AppCompatActivity {
 
     PDFView pdfView;
-    Button btn1,btn2,btn3;
+    Button btn1,btn2,btn3,btn4;
     String pdfurl ="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
     String pdfurl2 ="https://www.esisalama.com/assets/upload/horaire/pdf/HORAIRE%20PREPA.pdf";
     String pdfurl3 ="https://static.oc-static.com/prod/ebooks/apprenez-a-creer-votre-site-web-avec-html5-et-css3_2016.pdf";
@@ -37,14 +41,14 @@ public class PdfActivity_link extends AppCompatActivity {
         btn1 = findViewById(R.id.book1);
         btn2 = findViewById(R.id.book2);
         btn3 = findViewById(R.id.book3);
+        btn4 = findViewById(R.id.book4);
 
         new RetrivePDFfromUrl().execute(pdfurl);
 
         btn1.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl));
         btn2.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl2));
         btn3.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl3));
-
-
+        btn4.setOnClickListener(view -> showPdf());
 
 
     }
@@ -99,4 +103,14 @@ public class PdfActivity_link extends AppCompatActivity {
                     .load();
         }
     }
-        }
+
+    public void showPdf(){
+        File file = new File(Environment.getExternalStorageDirectory()+"/pdf/temp.pdf");
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        Uri uri = Uri.fromFile(file);
+        intent.setDataAndType(uri, "application/pdf");
+        startActivity(intent);
+
+    }
+}
