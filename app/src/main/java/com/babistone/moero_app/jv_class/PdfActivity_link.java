@@ -20,6 +20,8 @@ public class PdfActivity_link extends AppCompatActivity {
 
     PDFView pdfView;
     String pdfurl ="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+    String pdfurl2 ="https://www.esisalama.com/assets/upload/horaire/pdf/HORAIRE%20PREPA.pdf";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,6 @@ public class PdfActivity_link extends AppCompatActivity {
         setContentView(R.layout.activity_pdf_link);
 
         pdfView = findViewById(R.id.pdf);
-
         new RetrivePDFfromUrl().execute(pdfurl);
 
     }
