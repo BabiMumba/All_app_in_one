@@ -75,8 +75,11 @@ public class PdfActivity_link extends AppCompatActivity {
             }
             return inputStream;
         }
-        protected void onProgressUpdate(Integer... progress) {
-            setProgressPercent(progress[0]);
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate(values);
+
         }
 
         @Override

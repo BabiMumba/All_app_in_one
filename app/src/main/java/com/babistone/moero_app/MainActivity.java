@@ -1,5 +1,6 @@
 package com.babistone.moero_app;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -11,6 +12,7 @@ import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
 import java.io.File;
+import java.net.URL;
 import java.util.List;
 
 
@@ -76,4 +78,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
 }
