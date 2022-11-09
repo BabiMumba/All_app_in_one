@@ -2,9 +2,11 @@ package com.babistone.moero_app.jv_class;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -36,6 +38,7 @@ public class PdfActivity_link extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_link);
+
 
         pdfView = findViewById(R.id.pdf);
         btn1 = findViewById(R.id.book1);
@@ -111,6 +114,5 @@ public class PdfActivity_link extends AppCompatActivity {
         Uri uri = Uri.fromFile(file);
         intent.setDataAndType(uri, "application/pdf");
         startActivity(intent);
-
     }
 }
