@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.babistone.moero_app.R;
@@ -36,9 +37,25 @@ public class PdfActivity_link extends AppCompatActivity {
         btn2 = findViewById(R.id.book2);
         btn3 = findViewById(R.id.book3);
 
+        new RetrivePDFfromUrl().execute(pdfurl);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new RetrivePDFfromUrl().execute(pdfurl);
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new RetrivePDFfromUrl().execute(pdfurl2);
+            }
+        });
+
+        btn3.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl3));
 
 
-        new RetrivePDFfromUrl().execute(pdfurl2);
+
 
     }
 
