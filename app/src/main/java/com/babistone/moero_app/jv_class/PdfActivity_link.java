@@ -105,7 +105,7 @@ public class PdfActivity_link extends AppCompatActivity {
     }
 
     public void showPdf(){
-        File file = new File(Environment.getExternalStorageDirectory()+"/pdf/temp.pdf");
+        File file = new File(Environment.getExternalStorageDirectory()+"/test.pdf");
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_VIEW);
         Uri uri = Uri.fromFile(file);
