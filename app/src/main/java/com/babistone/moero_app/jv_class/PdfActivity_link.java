@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.babistone.moero_app.R;
 import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -39,19 +40,8 @@ public class PdfActivity_link extends AppCompatActivity {
 
         new RetrivePDFfromUrl().execute(pdfurl);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new RetrivePDFfromUrl().execute(pdfurl);
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new RetrivePDFfromUrl().execute(pdfurl2);
-            }
-        });
-
+        btn1.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl));
+        btn2.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl2));
         btn3.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl3));
 
 
@@ -85,12 +75,25 @@ public class PdfActivity_link extends AppCompatActivity {
             }
             return inputStream;
         }
+        protected void onProgressUpdate(Integer... progress) {
+            setProgressPercent(progress[0]);
+        }
 
         @Override
         protected void onPostExecute(InputStream inputStream) {
             // after the execution of our async
             // task we are loading our pdf in our pdf view.
-            pdfView.fromStream(inputStream).load();
+            pdfView.fromStream(inputStream)
+                    .enableSwipe(true) // allows to block changing pages using swipe
+                    .swipeHorizontal(false)
+                    .enableDoubletap(true)
+                    .defaultPage(0)
+                    .enableAnnotationRendering(false) // render annotations (such as comments, colors or forms)
+                    .password(null)
+                    .scrollHandle(null)
+                    .enableAntialiasing(true)
+                    .spacing(0)
+                    .load();
         }
     }
         }

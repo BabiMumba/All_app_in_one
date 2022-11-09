@@ -7,6 +7,7 @@ import android.util.Log;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
 import java.io.File;
@@ -35,15 +36,15 @@ public class MainActivity extends AppCompatActivity {
         fileName = MainActivity.SAMPLE_FILE;
 
         //Open PDF from file
-        File file = new File(Environment.getExternalStorageDirectory() + "/test.pdf");
-        viewPDF.fromFile(file);
+
 
         /**
-
+         File file = new File(Environment.getExternalStorageDirectory() + "/test.pdf");
+         viewPDF.fromFile(file);
          */
 
         //Open from Asset
-        /*
+
         viewPDF.fromAsset(SAMPLE_FILE)
                 .defaultPage(0)
                 .enableSwipe(true)
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 .enableAnnotationRendering(true)
                 .scrollHandle(new DefaultScrollHandle(this))
                 .load();
-         */
+
 
     }
 
@@ -69,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void printBookmarksTree(List<PdfDocument.Bookmark> tree, String sep) {
         for (PdfDocument.Bookmark b : tree) {
-
             Log.e(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
             if (b.hasChildren()) {
                 printBookmarksTree(b.getChildren(), sep + "-");
