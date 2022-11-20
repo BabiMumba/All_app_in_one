@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "929322393985",
+    "project_id": "admobads-48d37",
+    "storage_bucket": "admobads-48d37.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929322393985:android:6b26200381cd77613ec880",
+        "android_client_info": {
+          "package_name": "com.babistone.moero_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929322393985-qdsq1ocjuvqotqnonl92kp90n6ptldsn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.babistone.moero_app",
+            "certificate_hash": "209834108b83db17f270d06aadc0ffa5c4916357"
+          }
+        },
+        {
+          "client_id": "929322393985-7vgt4d54sk7j3a320bj51mf6qvjm654o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRfnNp_0fgNxd8V47l6UmIa-5eGHbqSSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929322393985-7vgt4d54sk7j3a320bj51mf6qvjm654o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
