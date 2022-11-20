@@ -30,7 +30,7 @@
             android:name=".jv_class.AlertActivity"
             android:exported="false" />
         <activity
-            android:name=".jv_class.PdfActivity_link"
+            android:name=".jv_class.ViewFlipper"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

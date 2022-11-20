@@ -52,8 +52,6 @@ public class PdfActivity_link extends AppCompatActivity {
         btn2.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl2));
         btn3.setOnClickListener(view -> new RetrivePDFfromUrl().execute(pdfurl3));
         btn4.setOnClickListener(view -> showPdf());
-
-
     }
 
     class RetrivePDFfromUrl extends AsyncTask<String, Void, InputStream> {

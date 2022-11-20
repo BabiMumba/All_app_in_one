@@ -21,10 +21,9 @@ public class Frag_Flipper extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_flipper, container, false);
 
         viewFlipper = (ViewFlipper) rootView.findViewById(R.id.viewflip);
-        //imgdesc = (TextView) rootView.findViewById(R.id.imgdesc);
 
         for(int i=0; i<images.length; i++){
-            // This will create dynamic image views and add them to the ViewFlipper.
+
             setFlipperImage( images[i] );
         }
 
