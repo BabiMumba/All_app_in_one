@@ -13,10 +13,10 @@ class Frag_Flipper : Fragment() {
     var viewFlipper: ViewFlipper? = null
 
     var images = intArrayOf(
-        R.drawable.img3,
-        R.drawable.img6,
-        R.drawable.img7,
-        R.drawable.img8,
+        R.drawable.banner_design,
+        R.drawable.banner_genie_log,
+        R.drawable.banner_principale,
+        R.drawable.banner_reseaux,
         R.drawable.img9
     )
 
