@@ -2,6 +2,8 @@ package com.babistone.moero_app.admob;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import com.babistone.moero_app.R;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onNativeAdLoaded(NativeAd nativeAd) {
                         NativeTemplateStyle styles = new
-                                NativeTemplateStyle.Builder().withMainBackgroundColor(R.color.purple_200).build();
+                                NativeTemplateStyle.Builder().withMainBackgroundColor(ColorDrawable(Color.WHITE())).build();
                         TemplateView template = findViewById(R.id.my_template);
                         template.setStyles(styles);
                         template.setNativeAd(nativeAd);

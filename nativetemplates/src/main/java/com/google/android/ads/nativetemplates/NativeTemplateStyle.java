@@ -255,7 +255,7 @@ public class NativeTemplateStyle {
     }
 
     @CanIgnoreReturnValue
-    public Builder withMainBackgroundColor(int mainBackgroundColor) {
+    public Builder withMainBackgroundColor(ColorDrawable mainBackgroundColor) {
       this.styles.mainBackgroundColor = mainBackgroundColor;
       return this;
     }
