@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Moero_App</string>
     <string name="app_id_teste">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="app_id_reel">ca-app-pub-3001935889519098~9915787037</string>
+
     <string name="Intertitial_id_teste">ca-app-pub-3940256099942544/1033173712</string>
     <string name="nativeads_id_teste">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="nativeads_id_reel">ca-app-pub-3001935889519098/5029812932</string>
 
 </resources>

@@ -5,17 +5,17 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.babistone.moero_app.R
-import com.babistone.moero_app.jv_class.Frag_Flipper
 import com.google.android.ads.nativetemplates.NativeTemplateStyle
 import com.google.android.ads.nativetemplates.TemplateView
 import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.RequestConfiguration
 
 class ViewFlipper : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_view_flipper)
+        setContentView(R.layout.activity_main2)
 
 
 /*
@@ -25,6 +25,11 @@ class ViewFlipper : AppCompatActivity() {
  */
 
         MobileAds.initialize(this)
+        MobileAds.setRequestConfiguration(
+            RequestConfiguration.Builder()
+                .setTestDeviceIds(listOf("f01a4b37-2568-4128-9894-6d6453fd67bb"))
+                .build()
+        )
 //build ad
         val adLoader = AdLoader.Builder(this,getString(R.string.nativeads_id_teste))
             .forNativeAd {
