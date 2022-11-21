@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        MobileAds.initialize(this);
+
+
+        /*
+         MobileAds.initialize(this);
         AdLoader adLoader = new AdLoader.Builder(this, "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         adLoader.loadAd(new AdRequest.Builder().build());
+         */
 
     }
 }

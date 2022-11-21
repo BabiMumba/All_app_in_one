@@ -11,9 +11,7 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
-    <meta-data
-        android:name="com.google.android.gms.ads.APPLICATION_ID"
-        android:value="ca-app-pub-3940256099942544~3419835294" />
+
 
     <application
         android:allowBackup="true"
@@ -28,13 +26,13 @@
         android:theme="@style/Theme.Moero_App"
         tools:targetApi="31">
         <activity
-            android:name=".jv_class.ViewFlipper"
+            android:name=".admob.MainActivity"
             android:exported="false" />
         <activity
             android:name=".jv_class.AlertActivity"
             android:exported="false" />
         <activity
-            android:name=".admob.MainActivity"
+            android:name=".jv_class.ViewFlipper"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +40,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3419835294" />
     </application>
 
 </manifest>

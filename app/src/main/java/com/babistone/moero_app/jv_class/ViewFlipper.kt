@@ -17,10 +17,12 @@ class ViewFlipper : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_flipper)
 
-        val fragManager = supportFragmentManager
+
+/*
+ val fragManager = supportFragmentManager
         val tManager = fragManager.beginTransaction()
         tManager.replace(R.id.containerView, Frag_Flipper()).commit()
-
+ */
 
         MobileAds.initialize(this)
 //build ad
