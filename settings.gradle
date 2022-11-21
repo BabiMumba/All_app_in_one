@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Moero_App"
 include ':app'
+include ':nativetemplates'
