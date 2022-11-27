@@ -31,7 +31,7 @@ class ViewFlipper : AppCompatActivity() {
                 .build()
         )
 //build ad
-        val adLoader = AdLoader.Builder(this,getString(R.string.nativeads_id_teste))
+        val adLoader = AdLoader.Builder(this,getString(R.string.nativeads_id_reel))
             .forNativeAd {
                 val style  = NativeTemplateStyle.Builder().withMainBackgroundColor(ColorDrawable(
                     Color.WHITE))
